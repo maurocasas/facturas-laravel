@@ -1,0 +1,7 @@
+facturas-laravel
+Port a PHP / Laravel del SDK "facturas" (https://facturas-sdk.dev),
+Copyright LaPyme (https://lapyme.com.ar), licenciado bajo Apache License 2.0.
+Fuente original: https://github.com/LaPyme/facturas (paquete facturas 0.25.2, commit 4192c25).
+
+Este port reproduce el comportamiento, los nombres y las formas de datos del
+SDK original. No está afiliado ni respaldado por LaPyme ni por ARCA.
