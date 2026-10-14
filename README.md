@@ -5,7 +5,7 @@ crédito y notas de débito (también Factura E de exportación), consultá
 comprobantes y el Padrón, con una sola API.
 
 Es un port a PHP del SDK de TypeScript [`facturas`](https://facturas-sdk.dev)
-de [LaPyme](https://lapyme.com.ar): mismo comportamiento, mismos nombres y las
+de [La Pyme](https://lapyme.com.ar) (ver [Créditos](#créditos)): mismo comportamiento, mismos nombres y las
 mismas formas de datos. La [documentación original](https://facturas-sdk.dev)
 aplica tal cual; solo cambia la sintaxis (los objetos de TypeScript son arrays
 asociativos con las mismas claves). El detalle del mapeo está en
@@ -293,6 +293,19 @@ composer test
 ```
 
 La suite porta los tests del SDK original (más de 1600 casos).
+
+## Créditos
+
+Este paquete existe gracias a [La Pyme](https://lapyme.com.ar), que creó y publicó
+como código abierto [`facturas`](https://github.com/LaPyme/facturas), el SDK de
+TypeScript para facturación electrónica con ARCA. Todo el diseño viene de ahí: la
+API de emisión, el contrato de los cuatro resultados fiscales, la idempotencia con
+reservas, el comprobante impreso y la documentación en
+[facturas-sdk.dev](https://facturas-sdk.dev). Este repo es solo su traducción a PHP
+y Laravel, con sus tests portados uno por uno.
+
+Si trabajás con TypeScript o Node.js, usá el original:
+[`npm install facturas`](https://www.npmjs.com/package/facturas). ¡Gracias, La Pyme!
 
 ## Licencia
 
