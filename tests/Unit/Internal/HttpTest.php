@@ -215,7 +215,7 @@ describe('postXml', function () {
     it('rejects when the response stream errors', function () {
         // Headers arrived, then the body failed: Guzzle reports a RequestException carrying the response.
         $client = httpTestClient([
-            fn (RequestInterface $request) => throw new RequestException('socket closed', $request, new Response(200, [], '<partial'), null, ['errno' => 56]),
+            fn (RequestInterface $request) => throw httpTestResponseFailure('socket closed', $request, new Response(200, [], '<partial'), 56),
         ]);
 
         $error = httpTestCaught(fn () => httpTestPost(['client' => $client]));
@@ -227,10 +227,24 @@ describe('postXml', function () {
             ->and($error->responseBodyPreview)->toBe('<partial');
     });
 
+    it('reports a Guzzle 8 no-response network timeout as a timeout', function () {
+        if (! class_exists(\GuzzleHttp\Exception\NetworkTimeoutException::class)) {
+            $this->markTestSkipped('Guzzle 8 only');
+        }
+        $client = httpTestClient([
+            fn (RequestInterface $request) => throw new \GuzzleHttp\Exception\NetworkTimeoutException('cURL error 28: no response', $request),
+        ]);
+
+        $error = httpTestCaught(fn () => httpTestPost(['client' => $client, 'timeout' => 1234]));
+
+        expect($error)->toBeInstanceOf(ArcaTransportError::class)
+            ->and($error->getMessage())->toBe('ARCA HTTP request timed out after 1234ms');
+    });
+
     it('rejects when the response is aborted', function () {
         // cURL error 18 (CURLE_PARTIAL_FILE): the server closed the connection mid-body.
         $client = httpTestClient([
-            fn (RequestInterface $request) => throw new RequestException('transfer closed with outstanding read data remaining', $request, new Response(200, [], '<partial'), null, ['errno' => 18]),
+            fn (RequestInterface $request) => throw httpTestResponseFailure('transfer closed with outstanding read data remaining', $request, new Response(200, [], '<partial'), 18),
         ]);
 
         $error = httpTestCaught(fn () => httpTestPost(['client' => $client]));
@@ -316,3 +330,18 @@ describe('postXml', function () {
             ->and($error->getMessage())->toMatch('/ARCA HTTP request timed out after 1234ms/');
     });
 });
+
+/**
+ * A failure after the response headers arrived, built with the installed
+ * Guzzle's API: Guzzle 7 carries the response and cURL errno on
+ * RequestException, Guzzle 8 uses ResponseTransferException and reports the
+ * errno in the cURL message.
+ */
+function httpTestResponseFailure(string $message, RequestInterface $request, Response $response, int $errno): \Throwable
+{
+    if (class_exists(\GuzzleHttp\Exception\ResponseTransferException::class)) {
+        return new \GuzzleHttp\Exception\ResponseTransferException("cURL error {$errno}: {$message}", $request, $response);
+    }
+
+    return new RequestException($message, $request, $response, null, ['errno' => $errno]);
+}

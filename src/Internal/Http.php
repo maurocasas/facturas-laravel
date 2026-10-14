@@ -5,7 +5,6 @@ namespace Facturas\Internal;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\RequestOptions;
 use Facturas\Errors\ArcaTransportError;
 use Facturas\Support\AbortSignal;
@@ -128,16 +127,16 @@ final class Http
             return new ArcaTransportError("ARCA HTTP request timed out after {$timeout}ms", ['previous' => $previous]);
         }
         // Headers arrived but the body did not: the response stream failed.
-        if ($error instanceof RequestException && $error->getResponse() !== null) {
-            $response = $error->getResponse();
+        // Guzzle 7 exposes the response on RequestException, Guzzle 8 on ResponseException.
+        $response = method_exists($error, 'getResponse') ? $error->getResponse() : null;
+        if ($response instanceof \Psr\Http\Message\ResponseInterface) {
             try {
                 $partialBody = (string) $response->getBody();
             } catch (\Throwable) {
                 $partialBody = '';
             }
-            $context = $error->getHandlerContext();
             // CURLE_PARTIAL_FILE: the server closed the connection mid-body (Node's `aborted`).
-            $message = ($context['errno'] ?? null) === 18 ? 'ARCA HTTP response was aborted' : 'ARCA HTTP response stream failed';
+            $message = self::curlErrno($error) === 18 ? 'ARCA HTTP response was aborted' : 'ARCA HTTP response stream failed';
 
             return new ArcaTransportError($message, [
                 'previous' => $error,
@@ -161,12 +160,30 @@ final class Http
 
     private static function isTimeout(\Throwable $error): bool
     {
-        $context = method_exists($error, 'getHandlerContext') ? $error->getHandlerContext() : [];
-        if (($context['errno'] ?? null) === 28) {
+        // Guzzle 8 classifies timeouts by transfer phase.
+        foreach (['ConnectTimeoutException', 'NetworkTimeoutException', 'ResponseTimeoutException'] as $class) {
+            if (is_a($error, 'GuzzleHttp\\Exception\\'.$class)) {
+                return true;
+            }
+        }
+        if (self::curlErrno($error) === 28) {
             return true;
         }
 
         return str_contains(strtolower($error->getMessage()), 'timed out');
+    }
+
+    /** The cURL error number: Guzzle 7's handler context, or the "cURL error N:" message prefix. */
+    private static function curlErrno(\Throwable $error): ?int
+    {
+        if (method_exists($error, 'getHandlerContext')) {
+            $errno = $error->getHandlerContext()['errno'] ?? null;
+            if (is_int($errno)) {
+                return $errno;
+            }
+        }
+
+        return preg_match('/cURL error (\d+)/', $error->getMessage(), $match) ? (int) $match[1] : null;
     }
 
     private static function defaultClient(): ClientInterface

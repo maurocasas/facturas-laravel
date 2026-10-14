@@ -254,7 +254,7 @@ it('frees the file lock as soon as a holder process dies', function () {
             sleep(30);
         });
         PHP;
-    $process = proc_open([PHP_BINARY, '-r', $script], [1 => ['pipe', 'w'], 2 => ['pipe', 'w']], $pipes);
+    $process = proc_open([PHP_BINARY, '-d', 'display_errors=stderr', '-r', $script], [1 => ['pipe', 'w'], 2 => ['pipe', 'w']], $pipes);
     expect(is_resource($process))->toBeTrue();
     try {
         expect(trim((string) fgets($pipes[1])))->toBe('held');
