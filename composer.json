@@ -1,5 +1,5 @@
 {
-    "name": "vant/facturas-laravel",
+    "name": "maurocasas/facturas-laravel",
     "description": "Facturación electrónica ARCA / AFIP para Laravel: facturas, notas de crédito y débito, exportación y Padrón. Port del SDK facturas (facturas-sdk.dev).",
     "type": "library",
     "license": "Apache-2.0",

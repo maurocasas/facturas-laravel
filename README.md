@@ -34,7 +34,7 @@ También funciona sin Laravel (`ArcaClient::create()`).
 ## Instalación
 
 ```bash
-composer require vant/facturas-laravel
+composer require maurocasas/facturas-laravel
 ```
 
 ```bash

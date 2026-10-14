@@ -7,7 +7,7 @@ use Composer\InstalledVersions;
 /** The published version of this package (`cli/version.ts`). */
 final class Version
 {
-    public const PACKAGE = 'vant/facturas-laravel';
+    public const PACKAGE = 'maurocasas/facturas-laravel';
 
     /** The version Composer installed, or `0.0.0` when Composer cannot tell. */
     public static function readCliVersion(): string
