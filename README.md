@@ -28,7 +28,7 @@ asociativos con las mismas claves). El detalle del mapeo está en
   ARCA; `facturas:check` dice qué capa falla; `facturas:issue` emite una factura
   de prueba en homologación.
 
-Requiere PHP 8.2+, Laravel 11 o 12, y las extensiones `openssl`, `dom` y `curl`.
+Requiere PHP 8.2+, Laravel 11, 12 o 13, y las extensiones `openssl`, `dom` y `curl`.
 También funciona sin Laravel (`ArcaClient::create()`).
 
 ## Instalación
