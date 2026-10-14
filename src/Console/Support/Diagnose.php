@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 use Throwable;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Errors\SafeErrorMetadata;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Errors\SafeErrorMetadata;
 
 /**
  * The diagnosis table (`cli/diagnose.ts`). Every failure the CLI can name has

@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\Pdf\Format;
+use Facturas\Pdf\Format;
 
 describe('es-AR formatting', function () {
     it('formats minor units without floating point', function () {

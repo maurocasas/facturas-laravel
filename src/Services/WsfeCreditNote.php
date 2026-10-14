@@ -1,14 +1,14 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
 use DateTimeImmutable;
 use DateTimeInterface;
 use Throwable;
-use Vant\Facturas\Constants;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
+use Facturas\Constants;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
 
 /**
  * Credit and debit note derivation (`services/wsfe-credit-note.ts`).

@@ -1,11 +1,11 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Store\Lease;
-use Vant\Facturas\Store\LeaseDriver;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Store\StoreKeys;
-use Vant\Facturas\Support\AbortController;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Store\Lease;
+use Facturas\Store\LeaseDriver;
+use Facturas\Store\MemoryStore;
+use Facturas\Store\StoreKeys;
+use Facturas\Support\AbortController;
 
 /*
  * The parts of store/store.test.ts that cover the foundation (memory store,
@@ -197,7 +197,7 @@ it('hashes the same canonical JSON the TypeScript SDK does', function () {
 });
 
 it('wraps every store failure, even typed ones, like storeCall', function () {
-    $inner = new \Vant\Facturas\Errors\ArcaConfigurationError('inner');
+    $inner = new \Facturas\Errors\ArcaConfigurationError('inner');
 
     $error = storeFoundationCaught(fn () => StoreKeys::storeCall(fn () => throw $inner));
 

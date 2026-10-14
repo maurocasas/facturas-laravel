@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Query\Builder;
-use Vant\Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaConfigurationError;
 
 /**
  * Store on a Laravel database connection: the PHP counterpart of

@@ -1,10 +1,10 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
 
 /**
  * Issuance fields shared by the high-level facade (`services/issuance-fields.ts`).

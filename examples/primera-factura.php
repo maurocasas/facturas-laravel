@@ -3,11 +3,11 @@
 require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/_outcome.php';
 
-use Vant\Facturas\ArcaClient;
+use Facturas\ArcaClient;
 
 // Solo necesitás ARCA_TAX_ID, ARCA_CERTIFICATE_PEM, ARCA_PRIVATE_KEY_PEM y
 // ARCA_ENVIRONMENT. Este primer ejemplo no usa store ni clave para reintentos.
-// En Laravel: Vant\Facturas\Facades\Arca::issue([...]).
+// En Laravel: Facturas\Facades\Arca::issue([...]).
 $arca = ArcaClient::create();
 
 $factura = $arca->issue([

@@ -5,11 +5,11 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\Psr7\Response;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Internal\Logger;
-use Vant\Facturas\Soap\HttpSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Internal\Logger;
+use Facturas\Soap\HttpSoapTransport;
+use Facturas\Tests\Support\TestConfig;
 
 /**
  * The transport over a mocked Guzzle client (the TS tests mock `postXmlWithMetadata`;
@@ -126,7 +126,7 @@ describe('createSoapTransport', function () {
 
         // retries: 0 → the 503 is final, the queued success is never requested.
         expect(fn () => $transport->execute(['service' => 'wsfe', 'operation' => 'FECAESolicitar', 'retries' => 0, 'body' => []]))
-            ->toThrow(\Vant\Facturas\Errors\ArcaTransportError::class, 'ARCA HTTP request failed with status 503')
+            ->toThrow(\Facturas\Errors\ArcaTransportError::class, 'ARCA HTTP request failed with status 503')
             ->and($history)->toHaveCount(1);
 
         // Without the override the configured retries apply.

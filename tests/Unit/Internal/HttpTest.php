@@ -9,11 +9,11 @@ use GuzzleHttp\Middleware;
 use GuzzleHttp\Promise\Create;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\RequestInterface;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Internal\Http;
-use Vant\Facturas\Internal\Logger;
-use Vant\Facturas\Support\AbortController;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Internal\Http;
+use Facturas\Internal\Logger;
+use Facturas\Support\AbortController;
+use Facturas\Support\AbortSignal;
 
 /**
  * A Guzzle client over a MockHandler (the TS tests' mocked `https.request`).

@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Internal\Js;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Internal\Js;
 
 /**
  * Store key layout and helpers shared by the vouchers service and the adapters.

@@ -1,16 +1,16 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Store\FileStore;
-use Vant\Facturas\Store\Lease;
-use Vant\Facturas\Store\LeaseDriver;
-use Vant\Facturas\Store\LockingStore;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Store\StoreKeys;
-use Vant\Facturas\Support\AbortController;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Store\ArcaStore;
+use Facturas\Store\FileStore;
+use Facturas\Store\Lease;
+use Facturas\Store\LeaseDriver;
+use Facturas\Store\LockingStore;
+use Facturas\Store\MemoryStore;
+use Facturas\Store\StoreKeys;
+use Facturas\Support\AbortController;
+use Facturas\Support\AbortSignal;
 
 function storeTestDirectory(): string
 {
@@ -248,7 +248,7 @@ it('frees the file lock as soon as a holder process dies', function () {
     $directory = var_export($path, true);
     $script = <<<PHP
         require {$autoload};
-        (new Vant\\Facturas\\Store\\FileStore({$directory}))->withLock('sequence', function () {
+        (new Facturas\\Store\\FileStore({$directory}))->withLock('sequence', function () {
             fwrite(STDOUT, "held\\n");
             fflush(STDOUT);
             sleep(30);

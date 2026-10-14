@@ -2,8 +2,8 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Constants;
+use Facturas\ArcaClient;
+use Facturas\Constants;
 
 $arca = ArcaClient::create([
     'taxId' => getenv('ARCA_TAX_ID') ?: null,

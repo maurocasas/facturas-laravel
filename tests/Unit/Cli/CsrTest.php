@@ -1,7 +1,7 @@
 <?php
 
-use Vant\Facturas\Console\Support\Csr;
-use Vant\Facturas\Tests\Support\CliFiles;
+use Facturas\Console\Support\Csr;
+use Facturas\Tests\Support\CliFiles;
 
 const CLI_SUBJECT = ['taxId' => '20123456786', 'commonName' => 'facturas', 'organization' => 'Prueba SRL'];
 

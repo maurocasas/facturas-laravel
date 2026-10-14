@@ -1,8 +1,8 @@
 <?php
 
-use Vant\Facturas\Console\Support\Help;
-use Vant\Facturas\Console\Support\Output;
-use Vant\Facturas\Console\Support\Version;
+use Facturas\Console\Support\Help;
+use Facturas\Console\Support\Output;
+use Facturas\Console\Support\Version;
 
 describe('color guard', function () {
     it('paints only on a terminal', function () {

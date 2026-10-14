@@ -1,7 +1,7 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Decimal;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Decimal;
 
 /** `toThrowError(expect.objectContaining({code, field?}))`. */
 function decimalTestExpectInputError(callable $fn, string $code, ?string $field = null): void

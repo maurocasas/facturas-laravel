@@ -90,7 +90,7 @@ Todas las opciones están en [`config/facturas.php`](config/facturas.php).
 ## Emití tu primera factura
 
 ```php
-use Vant\Facturas\Facades\Arca;
+use Facturas\Facades\Arca;
 
 $resultado = Arca::issue([
     'issuer' => 'monotributo',
@@ -107,10 +107,10 @@ if ($resultado['kind'] === 'authorized') {
 }
 ```
 
-También podés inyectar `Vant\Facturas\ArcaClient` o crearlo sin Laravel:
+También podés inyectar `Facturas\ArcaClient` o crearlo sin Laravel:
 
 ```php
-use Vant\Facturas\ArcaClient;
+use Facturas\ArcaClient;
 
 $arca = ArcaClient::create([
     'taxId' => '20123456786',
@@ -151,7 +151,7 @@ la ventana de fechas que ARCA acepta hoy:
 
 ```php
 $vista = Arca::preview($input);           // voucherClass, voucherType, date, header, amounts, request
-$ventana = \Vant\Facturas\Services\WsfeDerive::voucherDateWindow(['voucherType' => 6, 'concept' => 'services']); // ['from' => ..., 'to' => ...]
+$ventana = \Facturas\Services\WsfeDerive::voucherDateWindow(['voucherType' => 6, 'concept' => 'services']); // ['from' => ..., 'to' => ...]
 ```
 
 ## Reintentos seguros
@@ -178,14 +178,14 @@ Stores incluidos (`ARCA_STORE`):
 | `file` | `Store\FileStore` | Un directorio privado; solo para un servidor. |
 | `memory` | `Store\MemoryStore` | Tests. |
 
-Podés escribir el tuyo implementando `Vant\Facturas\Store\ArcaStore` (y
+Podés escribir el tuyo implementando `Facturas\Store\ArcaStore` (y
 `LockingStore` para serializar emisiones entre procesos), y registrarlo en el
 contenedor como `ArcaStore::class`.
 
 `abortSignal` limita el tiempo de toda la llamada:
 
 ```php
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Support\AbortSignal;
 
 Arca::issue($input, ['idempotencyKey' => $clave, 'abortSignal' => AbortSignal::timeout(20_000)]);
 ```
@@ -243,8 +243,8 @@ comprobantes y Padrón.
 ## Comprobante impreso y PDF
 
 ```php
-use Vant\Facturas\Services\VoucherDocument;
-use Vant\Facturas\Pdf\VoucherPdf;
+use Facturas\Services\VoucherDocument;
+use Facturas\Pdf\VoucherPdf;
 
 $documento = VoucherDocument::buildVoucherDocument([...]); // datos del emisor + el voucher autorizado
 $pdf = VoucherPdf::render($documento, ['logo' => storage_path('app/logo.png')]); // bytes del PDF
@@ -271,7 +271,7 @@ puede publicar con `php artisan vendor:publish --tag=facturas-views`.
 | `ArcaTransportError` | Timeout, conexión o HTTP no-XML. |
 | `ArcaSoapFaultError`, `ArcaInvalidSoapResponseError`, `ArcaServiceError` | Respuestas SOAP de error o inválidas. |
 
-`Vant\Facturas\Errors\SafeErrorMetadata::from($error)` devuelve los campos
+`Facturas\Errors\SafeErrorMetadata::from($error)` devuelve los campos
 seguros para loguear o guardar.
 
 ## Diferencias con el SDK de TypeScript

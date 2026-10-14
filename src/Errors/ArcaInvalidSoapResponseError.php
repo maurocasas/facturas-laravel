@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Errors;
+namespace Facturas\Errors;
 
 use Throwable;
-use Vant\Facturas\Internal\Redaction;
+use Facturas\Internal\Redaction;
 
 /** Thrown when a response cannot be parsed as a valid SOAP envelope. */
 class ArcaInvalidSoapResponseError extends ArcaError

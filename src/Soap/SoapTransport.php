@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Soap;
+namespace Facturas\Soap;
 
 /**
  * Executes one SOAP operation against an ARCA service.
@@ -12,7 +12,7 @@ namespace Vant\Facturas\Soap;
 interface SoapTransport
 {
     /**
-     * @param  array{service: string, operation: string, body: array, retries?: int|null, bodyElementName?: string|null, bodyElementNamespaceMode?: 'default'|'prefix'|null, signal?: \Vant\Facturas\Support\AbortSignal|null}  $request
+     * @param  array{service: string, operation: string, body: array, retries?: int|null, bodyElementName?: string|null, bodyElementNamespaceMode?: 'default'|'prefix'|null, signal?: \Facturas\Support\AbortSignal|null}  $request
      * @return array{service: string, operation: string, raw: string, result: mixed}
      */
     public function execute(array $request): array;

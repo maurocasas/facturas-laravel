@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Soap\SoapTransport;
+use Facturas\Soap\SoapTransport;
 
 /**
  * Test double for SoapTransport (the TS tests' `soap.execute = vi.fn()`).

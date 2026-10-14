@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
 use Symfony\Component\Console\Output\ConsoleSectionOutput;

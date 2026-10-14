@@ -2,8 +2,8 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Services\VoucherDocument;
+use Facturas\ArcaClient;
+use Facturas\Services\VoucherDocument;
 
 $arca = ArcaClient::create();
 

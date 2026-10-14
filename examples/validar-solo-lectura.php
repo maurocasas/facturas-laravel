@@ -13,8 +13,8 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Errors\SafeErrorMetadata;
+use Facturas\ArcaClient;
+use Facturas\Errors\SafeErrorMetadata;
 
 $args = array_slice($argv, 1);
 foreach ($args as $i => $arg) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /**
  * Exit codes, the color guard and the factories of the painter and the writer

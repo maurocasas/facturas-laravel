@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
-use Vant\Facturas\Wsaa\WsaaSessionStore;
+use Facturas\Wsaa\WsaaSessionStore;
 
 /** Keeps the ticket from the WSAA layer in memory so WSFE reuses it (`--no-cache`). */
 final class EphemeralSessionStore implements WsaaSessionStore

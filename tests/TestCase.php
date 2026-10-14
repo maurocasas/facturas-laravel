@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests;
+namespace Facturas\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Vant\Facturas\FacturasServiceProvider;
+use Facturas\FacturasServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

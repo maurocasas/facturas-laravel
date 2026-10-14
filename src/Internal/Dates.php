@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
 /** @internal */
 final class Dates

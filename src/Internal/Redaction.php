@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
 /** @internal */
 final class Redaction
@@ -66,10 +66,10 @@ final class Redaction
             return $error[$name] ?? null;
         }
         if ($name === 'name' && $error instanceof \Throwable) {
-            return $error instanceof \Vant\Facturas\Errors\ArcaError ? $error->name() : (new \ReflectionClass($error))->getShortName();
+            return $error instanceof \Facturas\Errors\ArcaError ? $error->name() : (new \ReflectionClass($error))->getShortName();
         }
         if ($name === 'code' && $error instanceof \Throwable) {
-            return $error instanceof \Vant\Facturas\Errors\ArcaError ? $error->errorCode() : null;
+            return $error instanceof \Facturas\Errors\ArcaError ? $error->errorCode() : null;
         }
         $properties = get_object_vars($error);
 

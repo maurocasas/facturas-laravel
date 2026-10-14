@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Dates;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Dates;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
 
 /**
  * The QR of a printed voucher, per ARCA's QR specification v1 (`services/qr.ts`).

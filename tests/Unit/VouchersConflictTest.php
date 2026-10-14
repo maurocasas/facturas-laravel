@@ -1,13 +1,13 @@
 <?php
 
-use Vant\Facturas\Services\VouchersService;
-use Vant\Facturas\Services\VouchersSupport;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Store\StoreKeys;
-use Vant\Facturas\Tests\Support\FakeMethods;
-use Vant\Facturas\Tests\Support\MatchObject;
-use Vant\Facturas\Tests\Support\SpyStore;
+use Facturas\Services\VouchersService;
+use Facturas\Services\VouchersSupport;
+use Facturas\Services\WsfeDerive;
+use Facturas\Services\WsfeService;
+use Facturas\Store\StoreKeys;
+use Facturas\Tests\Support\FakeMethods;
+use Facturas\Tests\Support\MatchObject;
+use Facturas\Tests\Support\SpyStore;
 
 // The fixtures are dated around 2026-09-04, and ARCA only accepts a voucher
 // dated near the day it is sent.

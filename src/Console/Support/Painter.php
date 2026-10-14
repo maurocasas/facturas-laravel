@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /**
  * Wraps text in one ANSI sequence, or returns it untouched when color is off.

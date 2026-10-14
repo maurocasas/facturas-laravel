@@ -1,13 +1,13 @@
 <?php
 
-namespace Vant\Facturas\Console;
+namespace Facturas\Console;
 
-use Vant\Facturas\Console\Support\Check;
-use Vant\Facturas\Console\Support\CliCommand;
-use Vant\Facturas\Console\Support\CliIo;
-use Vant\Facturas\Console\Support\Help;
-use Vant\Facturas\Console\Support\Output;
-use Vant\Facturas\Console\Support\Writer;
+use Facturas\Console\Support\Check;
+use Facturas\Console\Support\CliCommand;
+use Facturas\Console\Support\CliIo;
+use Facturas\Console\Support\Help;
+use Facturas\Console\Support\Output;
+use Facturas\Console\Support\Writer;
 
 /** `npx facturas check`: tries every layer in order and names the one that fails. Never writes to ARCA. */
 class CheckCommand extends CliCommand

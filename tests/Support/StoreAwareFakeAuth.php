@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Wsaa\WsaaAuthModule;
-use Vant\Facturas\Wsaa\WsaaSessionStore;
+use Facturas\Wsaa\WsaaAuthModule;
+use Facturas\Wsaa\WsaaSessionStore;
 
 /**
  * A WSAA double that mirrors the SDK around its session store: the store is

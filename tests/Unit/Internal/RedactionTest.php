@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\Internal\Redaction;
+use Facturas\Internal\Redaction;
 
 describe('diagnostic redaction', function () {
     it('redacts qualified, unqualified, self-closing, and incomplete credentials', function () {
@@ -49,7 +49,7 @@ describe('diagnostic redaction', function () {
     });
 
     it('reads the same fields from an ARCA error instance', function () {
-        $error = new \Vant\Facturas\Errors\ArcaTransportError('failed', [
+        $error = new \Facturas\Errors\ArcaTransportError('failed', [
             'statusCode' => 500,
             'contentType' => 'text/xml',
             'responseBodyLength' => 26,

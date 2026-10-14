@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
 /**
  * Small helpers that reproduce JavaScript semantics the TypeScript SDK relies on.

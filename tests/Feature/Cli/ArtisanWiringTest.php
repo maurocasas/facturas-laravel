@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Vant\Facturas\Console\Support\CliEnvironment;
-use Vant\Facturas\Console\Support\Help;
-use Vant\Facturas\Tests\Support\CliFiles;
-use Vant\Facturas\Tests\Support\FakeCliEnvironment;
+use Facturas\Console\Support\CliEnvironment;
+use Facturas\Console\Support\Help;
+use Facturas\Tests\Support\CliFiles;
+use Facturas\Tests\Support\FakeCliEnvironment;
 
 beforeEach(function () {
     $this->environment = new FakeCliEnvironment;

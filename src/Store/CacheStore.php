@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 use Illuminate\Contracts\Cache\LockProvider;
 use Illuminate\Contracts\Cache\Repository;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Internal\Js;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Internal\Js;
 
 /**
  * Store on a Laravel cache repository (no TypeScript counterpart):

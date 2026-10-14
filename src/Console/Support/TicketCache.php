@@ -1,10 +1,10 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
-use Vant\Facturas\Store\FileStore;
-use Vant\Facturas\Wsaa\WsaaSessionStore;
-use Vant\Facturas\Wsaa\WsaaStoreAdapter;
+use Facturas\Store\FileStore;
+use Facturas\Wsaa\WsaaSessionStore;
+use Facturas\Wsaa\WsaaStoreAdapter;
 
 /**
  * The WSAA ticket, kept in the system temp directory so `check` and `issue`

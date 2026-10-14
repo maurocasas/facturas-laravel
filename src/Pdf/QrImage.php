@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Pdf;
+namespace Facturas\Pdf;
 
 use chillerlan\QRCode\Common\EccLevel;
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
-use Vant\Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaConfigurationError;
 
 /**
  * Q1 and Q2: the ARCA QR, drawn as vectors so it stays sharp when printed.

@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Config\ArcaConfig;
+use Facturas\Config\ArcaConfig;
 
 final class TestConfig
 {

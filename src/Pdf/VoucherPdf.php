@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Pdf;
+namespace Facturas\Pdf;
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
@@ -8,8 +8,8 @@ use DOMElement;
 use Illuminate\Container\Container;
 use InvalidArgumentException;
 use Throwable;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Services\VoucherDocument;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Services\VoucherDocument;
 
 /**
  * The A4 PDF of a voucher, drawn with dompdf. Port of `@facturas/pdf`

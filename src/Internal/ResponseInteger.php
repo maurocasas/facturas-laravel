@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
 
 /** @internal */
 final class ResponseInteger

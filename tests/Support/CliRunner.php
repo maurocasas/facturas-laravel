@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 use Symfony\Component\Console\Input\ArrayInput;
-use Vant\Facturas\Console\Support\CliEnvironment;
+use Facturas\Console\Support\CliEnvironment;
 
 /**
  * Runs one `facturas:*` command the way Artisan does, with stdin and both

@@ -1,16 +1,16 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\IssuanceWsmtxcaTest;
+namespace Facturas\Tests\Unit\IssuanceWsmtxcaTest;
 
-use Vant\Facturas\Errors\ArcaError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Services\IssuanceWsmtxca;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Services\WsmtxcaIssuance;
-use Vant\Facturas\Services\WsmtxcaService;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\Errors\ArcaError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Services\IssuanceWsmtxca;
+use Facturas\Services\WsfeDerive;
+use Facturas\Services\WsmtxcaIssuance;
+use Facturas\Services\WsmtxcaService;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
 
 // The fixtures are dated around 2026-09-04, and ARCA only accepts a voucher
 // dated near the day it is sent (the TS tests fake the clock at this instant).

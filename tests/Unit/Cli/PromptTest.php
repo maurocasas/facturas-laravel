@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\Console\Support\Prompt;
+use Facturas\Console\Support\Prompt;
 
 /** @return resource */
 function cliStdin(string $text)

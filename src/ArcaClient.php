@@ -1,19 +1,19 @@
 <?php
 
-namespace Vant\Facturas;
+namespace Facturas;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Internal\Logger;
-use Vant\Facturas\Services\PadronService;
-use Vant\Facturas\Services\VouchersService;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Services\WsfexService;
-use Vant\Facturas\Services\WsmtxcaService;
-use Vant\Facturas\Soap\HttpSoapTransport;
-use Vant\Facturas\Soap\SoapTransport;
-use Vant\Facturas\Wsaa\WsaaAuth;
-use Vant\Facturas\Wsaa\WsaaAuthModule;
-use Vant\Facturas\Wsaa\WsaaStoreAdapter;
+use Facturas\Config\ArcaConfig;
+use Facturas\Internal\Logger;
+use Facturas\Services\PadronService;
+use Facturas\Services\VouchersService;
+use Facturas\Services\WsfeService;
+use Facturas\Services\WsfexService;
+use Facturas\Services\WsmtxcaService;
+use Facturas\Soap\HttpSoapTransport;
+use Facturas\Soap\SoapTransport;
+use Facturas\Wsaa\WsaaAuth;
+use Facturas\Wsaa\WsaaAuthModule;
+use Facturas\Wsaa\WsaaStoreAdapter;
 
 /**
  * Fully wired ARCA client (`createArcaClient()` in the TypeScript SDK).

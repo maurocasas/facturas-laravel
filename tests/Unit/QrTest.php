@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\QrTest;
+namespace Facturas\Tests\Unit\QrTest;
 
-use Vant\Facturas\Services\Qr;
-use Vant\Facturas\Tests\Support\WsfePortAssertions as A;
+use Facturas\Services\Qr;
+use Facturas\Tests\Support\WsfePortAssertions as A;
 
 function base(): array
 {

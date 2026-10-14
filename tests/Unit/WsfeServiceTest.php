@@ -1,14 +1,14 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\WsfeServiceTest;
+namespace Facturas\Tests\Unit\WsfeServiceTest;
 
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
-use Vant\Facturas\Tests\Support\WsfePortAssertions as A;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Services\WsfeService;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
+use Facturas\Tests\Support\WsfePortAssertions as A;
 
 /** @return object{auth: FakeAuth, soap: FakeSoapTransport} */
 function createBaseOptions(): object

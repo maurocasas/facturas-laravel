@@ -1,13 +1,13 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Internal\Authentication;
-use Vant\Facturas\Services\WsfexService;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
-use Vant\Facturas\Tests\Support\WsfexTestHelpers as H;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Internal\Authentication;
+use Facturas\Services\WsfexService;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
+use Facturas\Tests\Support\WsfexTestHelpers as H;
 
 function wsfexBaseOptions(): object
 {

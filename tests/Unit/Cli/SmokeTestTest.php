@@ -1,11 +1,11 @@
 <?php
 
-use Vant\Facturas\Console\Support\Check;
-use Vant\Facturas\Console\Support\Output;
-use Vant\Facturas\Console\Support\SmokeTest;
-use Vant\Facturas\Errors\ArcaServiceError;
+use Facturas\Console\Support\Check;
+use Facturas\Console\Support\Output;
+use Facturas\Console\Support\SmokeTest;
+use Facturas\Errors\ArcaServiceError;
 
-function cliCollectingWriter(string &$out): Vant\Facturas\Console\Support\Writer
+function cliCollectingWriter(string &$out): Facturas\Console\Support\Writer
 {
     return Output::createWriter(function (string $chunk) use (&$out) {
         $out .= $chunk;

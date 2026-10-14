@@ -47,7 +47,7 @@ Clases PHP por módulo TS:
 | `store/lock.ts` | `Store\Lease`, `Store\LeaseDriver` |
 | `wsaa/*` | `Wsaa\*` |
 | `errors.ts` | `Errors\*` (`toArcaSafeErrorMetadata` → `Errors\SafeErrorMetadata::from`) |
-| `constants.ts` | `Vant\Facturas\Constants` |
+| `constants.ts` | `Facturas\Constants` |
 | `config.ts` | `Config\ArcaConfig`, `Config\ServiceConfig` |
 
 ### Datos

@@ -1,17 +1,17 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
 use Throwable;
-use Vant\Facturas\Constants;
-use Vant\Facturas\Errors\ArcaError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Dates;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
+use Facturas\Constants;
+use Facturas\Errors\ArcaError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Dates;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
 
 /**
  * Invoice derivation for `issue()` (`services/wsfe-derive.ts`). No I/O.

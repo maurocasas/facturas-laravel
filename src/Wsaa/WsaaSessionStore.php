@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Wsaa;
+namespace Facturas\Wsaa;
 
 /**
  * Shared WSAA ticket store for multi-process deployments. The key is

@@ -1,16 +1,16 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\WsmtxcaServiceTest;
+namespace Facturas\Tests\Unit\WsmtxcaServiceTest;
 
 use PHPUnit\Framework\Assert;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Internal\Xml;
-use Vant\Facturas\Services\WsmtxcaService;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Internal\Xml;
+use Facturas\Services\WsmtxcaService;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
 
 /** vitest `toMatchObject`: recursive subset for records, same length for lists. */
 function matchObject(mixed $actual, array $expected, string $path = '$'): void
@@ -52,7 +52,7 @@ function expectSerializedAuthBefore(string $bodyElementName, array $body, string
     expect($operationIndex)->toBeGreaterThan($authIndex);
 }
 
-/** @return array{config: \Vant\Facturas\Config\ArcaConfig, auth: FakeAuth, soap: FakeSoapTransport} */
+/** @return array{config: \Facturas\Config\ArcaConfig, auth: FakeAuth, soap: FakeSoapTransport} */
 function createBaseOptions(): array
 {
     $soap = new FakeSoapTransport;
@@ -141,7 +141,7 @@ describe('createWsmtxcaService', function () {
                 'comprobanteCAERequest' => ['numeroComprobante' => 11],
             ],
         ]));
-        expect($error)->toBeInstanceOf(\Vant\Facturas\Errors\ArcaInputError::class);
+        expect($error)->toBeInstanceOf(\Facturas\Errors\ArcaInputError::class);
         expect($error->name())->toBe('ArcaInputError');
         expect($error->getCode())->toBe('ARCA_INPUT_RESERVED_FIELD');
         expect($error->field)->toBe('data.authRequest');
@@ -539,7 +539,7 @@ describe('createWsmtxcaService', function () {
             'salesPoint' => 8,
             'voucherNumber' => 25,
         ]));
-        expect($error)->toBeInstanceOf(\Vant\Facturas\Errors\ArcaServiceError::class);
+        expect($error)->toBeInstanceOf(\Facturas\Errors\ArcaServiceError::class);
         expect($error->name())->toBe('ArcaServiceError');
         expect($error->service)->toBe('wsmtxca');
         expect($error->operation)->toBe('consultarComprobante');
@@ -564,7 +564,7 @@ describe('createWsmtxcaService', function () {
             'salesPoint' => 8,
             'voucherNumber' => 25,
         ]));
-        expect($error)->toBeInstanceOf(\Vant\Facturas\Errors\ArcaServiceError::class);
+        expect($error)->toBeInstanceOf(\Facturas\Errors\ArcaServiceError::class);
         expect($error->name())->toBe('ArcaServiceError');
         expect($error->operation)->toBe('consultarComprobante');
     });
@@ -684,7 +684,7 @@ describe('createWsmtxcaService', function () {
         expect($error->getMessage())->toBe('Invalid WSMTXCA last authorized number');
 
         $error = catchError(fn () => $service->lookupVoucher(['voucherType' => 6, 'salesPoint' => 8, 'voucherNumber' => 25]));
-        expect($error)->toBeInstanceOf(\Vant\Facturas\Errors\ArcaServiceError::class);
+        expect($error)->toBeInstanceOf(\Facturas\Errors\ArcaServiceError::class);
         expect($error->name())->toBe('ArcaServiceError');
         expect($error->getMessage())->toBe('WSMTXCA did not return the voucher issue date');
     });

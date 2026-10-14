@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /**
  * The one ARS 1 invoice `facturas:issue` sends in homologación, and how its

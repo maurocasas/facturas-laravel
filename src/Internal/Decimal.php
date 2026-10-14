@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
-use Vant\Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaInputError;
 
 /**
  * Exact decimal handling for ARCA amount fields. Minor units are PHP ints

@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Pdf;
+namespace Facturas\Pdf;
 
-use Vant\Facturas\Internal\Js;
+use Facturas\Internal\Js;
 
 /**
  * es-AR formatting of the model's minor units, ISO dates and identifiers.

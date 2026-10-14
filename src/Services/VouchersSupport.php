@@ -1,18 +1,18 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Errors\SafeErrorMetadata;
-use Vant\Facturas\Internal\Dates;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Store\LockingStore;
-use Vant\Facturas\Store\StoreKeys;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Errors\SafeErrorMetadata;
+use Facturas\Internal\Dates;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
+use Facturas\Store\ArcaStore;
+use Facturas\Store\LockingStore;
+use Facturas\Store\StoreKeys;
+use Facturas\Support\AbortSignal;
 
 /**
  * The module-level functions of `services/vouchers.ts`: everything the

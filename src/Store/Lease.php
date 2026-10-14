@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Support\AbortSignal;
 
 /**
  * Runs work while holding a lease other processes honor. A holder that dies

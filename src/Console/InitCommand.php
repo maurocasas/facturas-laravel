@@ -1,17 +1,17 @@
 <?php
 
-namespace Vant\Facturas\Console;
+namespace Facturas\Console;
 
-use Vant\Facturas\Console\Support\ArcaSteps;
-use Vant\Facturas\Console\Support\Certificate;
-use Vant\Facturas\Console\Support\CliCommand;
-use Vant\Facturas\Console\Support\CliIo;
-use Vant\Facturas\Console\Support\Csr;
-use Vant\Facturas\Console\Support\Cuit;
-use Vant\Facturas\Console\Support\Discover;
-use Vant\Facturas\Console\Support\Help;
-use Vant\Facturas\Console\Support\Output;
-use Vant\Facturas\Console\Support\Writer;
+use Facturas\Console\Support\ArcaSteps;
+use Facturas\Console\Support\Certificate;
+use Facturas\Console\Support\CliCommand;
+use Facturas\Console\Support\CliIo;
+use Facturas\Console\Support\Csr;
+use Facturas\Console\Support\Cuit;
+use Facturas\Console\Support\Discover;
+use Facturas\Console\Support\Help;
+use Facturas\Console\Support\Output;
+use Facturas\Console\Support\Writer;
 
 /**
  * `npx facturas init`: generates the key and the CSR, prints the exact ARCA

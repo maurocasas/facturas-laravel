@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 /**
  * Durable values for idempotent issuance and WSAA tickets. `add` must

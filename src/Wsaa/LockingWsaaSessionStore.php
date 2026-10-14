@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Wsaa;
+namespace Facturas\Wsaa;
 
 /** A WSAA session store that serializes concurrent ticket renewals. */
 interface LockingWsaaSessionStore extends WsaaSessionStore

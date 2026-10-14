@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas;
+namespace Facturas;
 
 /** Common ARCA reference data for readable userland code and examples (`facturas/constants`). */
 final class Constants

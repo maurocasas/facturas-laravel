@@ -1,18 +1,18 @@
 <?php
 
-namespace Vant\Facturas\Wsaa;
+namespace Facturas\Wsaa;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Config\ServiceConfig;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Internal\Abort;
-use Vant\Facturas\Internal\Http;
-use Vant\Facturas\Internal\Logger;
-use Vant\Facturas\Internal\Redaction;
-use Vant\Facturas\Internal\Xml;
+use Facturas\Config\ArcaConfig;
+use Facturas\Config\ServiceConfig;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Internal\Abort;
+use Facturas\Internal\Http;
+use Facturas\Internal\Logger;
+use Facturas\Internal\Redaction;
+use Facturas\Internal\Xml;
 
 /**
  * WSAA login: signs a loginTicketRequest (CMS) with the certificate and key,

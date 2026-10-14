@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\ArcaClient;
+use Facturas\ArcaClient;
 
 // Ejemplos importables: incluir este archivo no hace ninguna llamada fiscal.
 

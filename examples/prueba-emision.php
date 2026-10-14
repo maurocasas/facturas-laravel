@@ -15,9 +15,9 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Errors\SafeErrorMetadata;
-use Vant\Facturas\Store\FileStore;
+use Facturas\ArcaClient;
+use Facturas\Errors\SafeErrorMetadata;
+use Facturas\Store\FileStore;
 
 $opciones = getopt('', ['env-file:', 'pv:', 'confirmo']);
 $puntoDeVenta = (int) ($opciones['pv'] ?? 9);

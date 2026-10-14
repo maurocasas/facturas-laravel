@@ -1,7 +1,7 @@
 <?php
 
-use Vant\Facturas\Console\Support\Discover;
-use Vant\Facturas\Tests\Support\CliFiles;
+use Facturas\Console\Support\Discover;
+use Facturas\Tests\Support\CliFiles;
 
 afterEach(fn () => CliFiles::cleanup());
 

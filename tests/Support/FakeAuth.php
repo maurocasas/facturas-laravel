@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Wsaa\WsaaAuthModule;
+use Facturas\Wsaa\WsaaAuthModule;
 
 /** Test double for the WSAA module (the TS tests' `auth.login = vi.fn()`). */
 final class FakeAuth implements WsaaAuthModule

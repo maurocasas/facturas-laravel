@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Internal\Dates;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Store\StoreKeys;
+use Facturas\Internal\Dates;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
+use Facturas\Store\StoreKeys;
 
 /**
  * Identity matching between a sent WSFE voucher and the one ARCA reports

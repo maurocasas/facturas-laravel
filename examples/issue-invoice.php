@@ -3,8 +3,8 @@
 require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/_outcome.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Store\MemoryStore;
+use Facturas\ArcaClient;
+use Facturas\Store\MemoryStore;
 
 // Solo para este ejemplo. En una aplicación, usá un store persistente
 // (DatabaseStore, RedisStore, CacheStore o FileStore).

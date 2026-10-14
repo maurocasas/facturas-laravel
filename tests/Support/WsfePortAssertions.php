@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 use PHPUnit\Framework\Assert;
-use Vant\Facturas\Errors\ArcaError;
+use Facturas\Errors\ArcaError;
 
 /**
  * vitest-style assertions for the ported WSFE tests:

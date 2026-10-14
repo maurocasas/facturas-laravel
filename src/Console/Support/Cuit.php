@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /**
  * CUIT validation for the CLI (`cli/cuit.ts`), so a wrong number is named as

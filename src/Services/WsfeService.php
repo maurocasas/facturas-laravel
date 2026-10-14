@@ -1,20 +1,20 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Internal\Authentication;
-use Vant\Facturas\Internal\Dates;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Internal\ResponseInteger;
-use Vant\Facturas\Soap\SoapTransport;
-use Vant\Facturas\Wsaa\WsaaAuthModule;
+use Facturas\Config\ArcaConfig;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Internal\Authentication;
+use Facturas\Internal\Dates;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
+use Facturas\Internal\ResponseInteger;
+use Facturas\Soap\SoapTransport;
+use Facturas\Wsaa\WsaaAuthModule;
 
 /**
  * WSFE electronic invoicing service (`createWsfeService` in the TypeScript SDK).
@@ -53,7 +53,7 @@ final class WsfeService
      * `voucherNumber`, without transport retries, returning structured evidence
      * (`authorized`, `rejected` or `indeterminate`) instead of throwing.
      *
-     * @param  array{representedTaxId?: int|string, data: array, voucherNumber: int, forceRefresh?: bool, abortSignal?: \Vant\Facturas\Support\AbortSignal}  $input
+     * @param  array{representedTaxId?: int|string, data: array, voucherNumber: int, forceRefresh?: bool, abortSignal?: \Facturas\Support\AbortSignal}  $input
      */
     public function issue(array $input): array
     {
@@ -71,7 +71,7 @@ final class WsfeService
     /**
      * Returns the next available voucher number for the given sales point and type.
      *
-     * @param  array{representedTaxId?: int|string, salesPoint: int, voucherType: int, forceRefresh?: bool, abortSignal?: \Vant\Facturas\Support\AbortSignal}  $input
+     * @param  array{representedTaxId?: int|string, salesPoint: int, voucherType: int, forceRefresh?: bool, abortSignal?: \Facturas\Support\AbortSignal}  $input
      */
     public function getNextVoucherNumber(array $input): int
     {
@@ -247,7 +247,7 @@ final class WsfeService
     /**
      * Consults one exact voucher and normalizes WSFE error 602 to `not_found`.
      *
-     * @param  array{representedTaxId?: int|string, number: int, salesPoint: int, voucherType: int, forceRefresh?: bool, abortSignal?: \Vant\Facturas\Support\AbortSignal}  $input
+     * @param  array{representedTaxId?: int|string, number: int, salesPoint: int, voucherType: int, forceRefresh?: bool, abortSignal?: \Facturas\Support\AbortSignal}  $input
      */
     public function lookupVoucher(array $input): array
     {

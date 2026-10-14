@@ -1,13 +1,13 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Internal\Authentication;
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Soap\SoapTransport;
-use Vant\Facturas\Wsaa\WsaaAuthModule;
+use Facturas\Config\ArcaConfig;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Internal\Authentication;
+use Facturas\Internal\Js;
+use Facturas\Soap\SoapTransport;
+use Facturas\Wsaa\WsaaAuthModule;
 
 /**
  * Padron taxpayer registry service (`createPadronService` in the TypeScript SDK).

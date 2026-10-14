@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /**
  * The system clipboard, through the tool each platform already ships

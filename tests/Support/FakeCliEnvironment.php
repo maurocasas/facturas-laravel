@@ -1,12 +1,12 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 use DateTimeImmutable;
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Console\Support\CliEnvironment;
-use Vant\Facturas\Wsaa\WsaaAuthModule;
+use Facturas\ArcaClient;
+use Facturas\Config\ArcaConfig;
+use Facturas\Console\Support\CliEnvironment;
+use Facturas\Wsaa\WsaaAuthModule;
 
 /**
  * The outside world of the `facturas:*` commands, offline (the TS tests'

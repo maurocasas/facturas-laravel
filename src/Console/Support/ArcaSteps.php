@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /**
  * The ARCA steps `facturas:init` prints (`cli/arca-steps.ts`). Page, menu,

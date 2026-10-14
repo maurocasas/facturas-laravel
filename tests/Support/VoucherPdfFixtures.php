@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 /**
  * Voucher documents as `VoucherDocument::buildVoucherDocument()` returns them

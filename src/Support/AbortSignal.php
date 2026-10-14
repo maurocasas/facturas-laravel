@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Support;
+namespace Facturas\Support;
 
 /**
  * PHP stand-in for the Web `AbortSignal` the TypeScript SDK accepts as

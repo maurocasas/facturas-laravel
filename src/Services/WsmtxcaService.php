@@ -1,19 +1,19 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Internal\Authentication;
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Internal\ResponseInteger;
-use Vant\Facturas\Soap\SoapTransport;
-use Vant\Facturas\Wsaa\WsaaAuthModule;
+use Facturas\Config\ArcaConfig;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Internal\Authentication;
+use Facturas\Internal\Js;
+use Facturas\Internal\ResponseInteger;
+use Facturas\Soap\SoapTransport;
+use Facturas\Wsaa\WsaaAuthModule;
 
 /**
  * WSMTXCA electronic invoicing service (Factura de Crédito Electrónica).
@@ -46,7 +46,7 @@ class WsmtxcaService
      * Issues one exact voucher: a single autorizarComprobante without transport
      * retries, returning structured evidence instead of throwing.
      *
-     * @param  array{representedTaxId?: int|string|null, data: array, forceRefresh?: bool|null, abortSignal?: \Vant\Facturas\Support\AbortSignal|null}  $input
+     * @param  array{representedTaxId?: int|string|null, data: array, forceRefresh?: bool|null, abortSignal?: \Facturas\Support\AbortSignal|null}  $input
      */
     public function issue(array $input): array
     {
@@ -56,7 +56,7 @@ class WsmtxcaService
     /**
      * Returns the last authorized voucher number for the given sales point and type.
      *
-     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, forceRefresh?: bool|null, abortSignal?: \Vant\Facturas\Support\AbortSignal|null}  $input
+     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, forceRefresh?: bool|null, abortSignal?: \Facturas\Support\AbortSignal|null}  $input
      * @return array{voucherNumber: int, raw: array}
      */
     public function getLastAuthorizedVoucher(array $input): array
@@ -95,7 +95,7 @@ class WsmtxcaService
     /**
      * Consults one exact voucher and normalizes WSMTXCA error 1503 to `not_found`.
      *
-     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, voucherNumber: int, forceRefresh?: bool|null, abortSignal?: \Vant\Facturas\Support\AbortSignal|null}  $input
+     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, voucherNumber: int, forceRefresh?: bool|null, abortSignal?: \Facturas\Support\AbortSignal|null}  $input
      */
     public function lookupVoucher(array $input): array
     {

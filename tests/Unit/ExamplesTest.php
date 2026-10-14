@@ -1,13 +1,13 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\Examples;
+namespace Facturas\Tests\Unit\Examples;
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Services\VouchersSupport;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\ArcaClient;
+use Facturas\Services\VouchersSupport;
+use Facturas\Store\MemoryStore;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
 
 require_once __DIR__.'/../../examples/emision-completa.php';
 

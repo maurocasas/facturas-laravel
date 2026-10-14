@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Container\Container;
-use Vant\Facturas\Pdf\QrImage;
-use Vant\Facturas\Pdf\Theme;
-use Vant\Facturas\Pdf\VoucherPdf;
-use Vant\Facturas\Tests\Support\PdfReader;
-use Vant\Facturas\Tests\Support\VoucherPdfFixtures as Fixtures;
+use Facturas\Pdf\QrImage;
+use Facturas\Pdf\Theme;
+use Facturas\Pdf\VoucherPdf;
+use Facturas\Tests\Support\PdfReader;
+use Facturas\Tests\Support\VoucherPdfFixtures as Fixtures;
 
 /* Outside Laravel: no view factory, the template is included as plain PHP. */
 

@@ -1,13 +1,13 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Services\VouchersService;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Services\WsmtxcaService;
-use Vant\Facturas\Tests\Support\FakeMethods;
-use Vant\Facturas\Tests\Support\FakeWsmtxcaService;
-use Vant\Facturas\Tests\Support\MatchObject;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Services\VouchersService;
+use Facturas\Services\WsfeDerive;
+use Facturas\Services\WsmtxcaService;
+use Facturas\Tests\Support\FakeMethods;
+use Facturas\Tests\Support\FakeWsmtxcaService;
+use Facturas\Tests\Support\MatchObject;
 
 function vl_data(): array
 {

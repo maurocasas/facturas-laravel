@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 /**
  * A store that can run work exclusively across processes. `$options['signal']`
@@ -13,7 +13,7 @@ interface LockingStore extends ArcaStore
      * @template T
      *
      * @param  callable(): T  $fn
-     * @param  array{signal?: \Vant\Facturas\Support\AbortSignal|null}  $options
+     * @param  array{signal?: \Facturas\Support\AbortSignal|null}  $options
      * @return T
      */
     public function withLock(string $key, callable $fn, array $options = []): mixed;

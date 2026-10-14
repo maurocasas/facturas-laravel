@@ -1,13 +1,13 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\WsfeResponseIntegerTest;
+namespace Facturas\Tests\Unit\WsfeResponseIntegerTest;
 
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
-use Vant\Facturas\Tests\Support\WsfePortAssertions as A;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Services\WsfeService;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
+use Facturas\Tests\Support\WsfePortAssertions as A;
 
 const MAX_SAFE_INTEGER = 9007199254740991;
 

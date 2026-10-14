@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Config;
+namespace Facturas\Config;
 
 use GuzzleHttp\ClientInterface;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Wsaa\WsaaSessionStore;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Store\ArcaStore;
+use Facturas\Wsaa\WsaaSessionStore;
 
 /**
  * Resolved ARCA client configuration (`ArcaClientConfig` in the TypeScript SDK).
@@ -128,7 +128,7 @@ final class ArcaConfig
             $invalid[] = 'timeout';
         }
         $retries = $config['retries'] ?? self::DEFAULT_RETRIES;
-        if (! \Vant\Facturas\Internal\Js::isInteger($retries) || $retries < 0) {
+        if (! \Facturas\Internal\Js::isInteger($retries) || $retries < 0) {
             $invalid[] = 'retries';
         }
         $retryDelay = $config['retryDelay'] ?? self::DEFAULT_RETRY_DELAY_MS;

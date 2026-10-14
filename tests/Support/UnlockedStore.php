@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Store\ArcaStore;
+use Facturas\Store\ArcaStore;
 
 /** A custom store without withLock: no sequence lock, no barrier, no claim. */
 final class UnlockedStore implements ArcaStore

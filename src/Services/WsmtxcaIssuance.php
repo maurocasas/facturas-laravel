@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
 /**
  * The object `createWsmtxcaIssuanceService(wsmtxca)` returns: the WSMTXCA side of
@@ -11,7 +11,7 @@ final class WsmtxcaIssuance
     public function __construct(private readonly WsmtxcaService $wsmtxca) {}
 
     /**
-     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, forceRefresh?: bool|null, abortSignal?: \Vant\Facturas\Support\AbortSignal|null}  $input
+     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, forceRefresh?: bool|null, abortSignal?: \Facturas\Support\AbortSignal|null}  $input
      */
     public function getNextVoucherNumber(array $input): int
     {
@@ -19,7 +19,7 @@ final class WsmtxcaIssuance
     }
 
     /**
-     * @param  array{representedTaxId?: int|string|null, forceRefresh?: bool|null, data: array, voucherNumber: int, abortSignal?: \Vant\Facturas\Support\AbortSignal|null}  $input
+     * @param  array{representedTaxId?: int|string|null, forceRefresh?: bool|null, data: array, voucherNumber: int, abortSignal?: \Facturas\Support\AbortSignal|null}  $input
      */
     public function issue(array $input): array
     {
@@ -35,7 +35,7 @@ final class WsmtxcaIssuance
     }
 
     /**
-     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, number: int, forceRefresh?: bool|null, abortSignal?: \Vant\Facturas\Support\AbortSignal|null}  $input
+     * @param  array{representedTaxId?: int|string|null, voucherType: int, salesPoint: int, number: int, forceRefresh?: bool|null, abortSignal?: \Facturas\Support\AbortSignal|null}  $input
      */
     public function lookupVoucher(array $input): array
     {

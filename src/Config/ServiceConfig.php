@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Config;
+namespace Facturas\Config;
 
-use Vant\Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaConfigurationError;
 
 /**
  * Endpoints and SOAP settings of each ARCA web service.

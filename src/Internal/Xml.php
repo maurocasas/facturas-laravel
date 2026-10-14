@@ -1,12 +1,12 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
 use DOMDocument;
 use DOMElement;
 use DOMNode;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaSoapFaultError;
 
 /**
  * XML building and parsing with the same shapes fast-xml-parser gives the

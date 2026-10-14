@@ -1,16 +1,16 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Errors\SafeErrorMetadata;
-use Vant\Facturas\Internal\Authentication;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Errors\SafeErrorMetadata;
+use Facturas\Internal\Authentication;
 
 /** Every value a serialized error could leak: message, public fields and the cause chain. */
 function errorsTestSerialized(Throwable $error): string

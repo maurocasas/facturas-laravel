@@ -1,10 +1,10 @@
 <?php
 
-use Vant\Facturas\Pdf\Format;
-use Vant\Facturas\Pdf\Theme;
-use Vant\Facturas\Pdf\VoucherPdf;
-use Vant\Facturas\Tests\Support\PdfReader;
-use Vant\Facturas\Tests\Support\VoucherPdfFixtures as Fixtures;
+use Facturas\Pdf\Format;
+use Facturas\Pdf\Theme;
+use Facturas\Pdf\VoucherPdf;
+use Facturas\Tests\Support\PdfReader;
+use Facturas\Tests\Support\VoucherPdfFixtures as Fixtures;
 
 /*
  * Port of packages/pdf/src/voucher.test.tsx. Each rendered voucher is read
@@ -469,7 +469,7 @@ describe('VoucherPdf with VoucherDocument::buildVoucherDocument()', function () 
             'taxId' => '20123456789', 'salesPoint' => 3, 'voucherType' => 6, 'number' => 41, 'date' => '2026-09-05',
             'total' => 123_420, 'cae' => '74123456789012', 'document' => ['type' => 99, 'number' => '0'],
         ];
-        $doc = \Vant\Facturas\Services\VoucherDocument::buildVoucherDocument([
+        $doc = \Facturas\Services\VoucherDocument::buildVoucherDocument([
             'voucher' => [
                 'salesPoint' => 3, 'number' => 41, 'voucherType' => 6, 'voucherClass' => 'B', 'date' => '2026-09-05',
                 'header' => ['concept' => 1, 'documentType' => 99, 'documentNumber' => '0', 'receiverVatConditionId' => 5, 'currencyId' => 'PES'],
@@ -483,8 +483,8 @@ describe('VoucherPdf with VoucherDocument::buildVoucherDocument()', function () 
                     ],
                     'taxes' => [],
                 ],
-                'qr' => \Vant\Facturas\Services\Qr::arcaQrUrl($qrInput),
-                'qrPayload' => \Vant\Facturas\Services\Qr::arcaQrPayload($qrInput),
+                'qr' => \Facturas\Services\Qr::arcaQrUrl($qrInput),
+                'qrPayload' => \Facturas\Services\Qr::arcaQrPayload($qrInput),
             ],
             'items' => [
                 ['description' => 'Taladro percutor 13 mm', 'quantity' => 2, 'unitPrice' => '605.00', 'gross' => 121_000, 'vat' => 21],
@@ -499,7 +499,7 @@ describe('VoucherPdf with VoucherDocument::buildVoucherDocument()', function () 
             'remitos' => ['0003-00000012'],
         ]);
         expect($doc)->toEqual(Fixtures::classBDocument());
-        expect(Fixtures::MONOTRIBUTO_CREDIT_LEGEND)->toBe(\Vant\Facturas\Services\VoucherDocument::MONOTRIBUTO_CREDIT_LEGEND);
+        expect(Fixtures::MONOTRIBUTO_CREDIT_LEGEND)->toBe(\Facturas\Services\VoucherDocument::MONOTRIBUTO_CREDIT_LEGEND);
         [$page] = renderVoucher($doc);
         expectApartadoB($page, $doc);
         expectFiscalFooter($page, $doc);

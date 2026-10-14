@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Pdf;
+namespace Facturas\Pdf;
 
 /**
  * What a voucher may restyle: fonts and colours. Sizes and placement are

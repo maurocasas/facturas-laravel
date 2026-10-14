@@ -1,11 +1,11 @@
 <?php
 
-use Vant\Facturas\Console\InitCommand;
-use Vant\Facturas\Console\Support\Csr;
-use Vant\Facturas\Tests\Support\CliFiles;
-use Vant\Facturas\Tests\Support\CliRunner;
-use Vant\Facturas\Tests\Support\FakeCliEnvironment;
-use Vant\Facturas\Tests\Support\LazyInputStream;
+use Facturas\Console\InitCommand;
+use Facturas\Console\Support\Csr;
+use Facturas\Tests\Support\CliFiles;
+use Facturas\Tests\Support\CliRunner;
+use Facturas\Tests\Support\FakeCliEnvironment;
+use Facturas\Tests\Support\LazyInputStream;
 
 function runInit(FakeCliEnvironment $environment, array $options, mixed $stdin = ''): array
 {

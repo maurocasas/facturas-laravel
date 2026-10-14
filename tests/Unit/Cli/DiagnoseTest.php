@@ -1,9 +1,9 @@
 <?php
 
-use Vant\Facturas\Console\Support\Diagnose;
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Errors\ArcaTransportError;
+use Facturas\Console\Support\Diagnose;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaTransportError;
 
 /** Every published row, asserted one by one. This is the contract. */
 dataset('cli diagnosis rows', [

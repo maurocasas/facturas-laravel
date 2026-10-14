@@ -1,11 +1,11 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Services\PadronService;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Services\PadronService;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\TestConfig;
 
 function padronFixture(): object
 {

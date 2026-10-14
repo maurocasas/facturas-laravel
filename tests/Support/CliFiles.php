@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 /** Temporary directories and the certificates the CLI tests sign themselves. */
 final class CliFiles

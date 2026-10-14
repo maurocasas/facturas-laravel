@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Wsaa;
+namespace Facturas\Wsaa;
 
-use Vant\Facturas\Internal\Js;
+use Facturas\Internal\Js;
 
 /** @internal */
 final class SessionKeys

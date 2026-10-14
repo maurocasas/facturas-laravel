@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 /** One lease backend: acquire, keep alive, and give back only what it owns. */
 interface LeaseDriver

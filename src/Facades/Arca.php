@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Facades;
+namespace Facturas\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Vant\Facturas\ArcaClient;
+use Facturas\ArcaClient;
 
 /**
  * @method static array issue(array $input, array $options = [])
@@ -25,22 +25,22 @@ class Arca extends Facade
         return ArcaClient::class;
     }
 
-    public static function wsfe(): \Vant\Facturas\Services\WsfeService
+    public static function wsfe(): \Facturas\Services\WsfeService
     {
         return static::getFacadeRoot()->wsfe;
     }
 
-    public static function wsfex(): \Vant\Facturas\Services\WsfexService
+    public static function wsfex(): \Facturas\Services\WsfexService
     {
         return static::getFacadeRoot()->wsfex;
     }
 
-    public static function wsmtxca(): \Vant\Facturas\Services\WsmtxcaService
+    public static function wsmtxca(): \Facturas\Services\WsmtxcaService
     {
         return static::getFacadeRoot()->wsmtxca;
     }
 
-    public static function padron(): \Vant\Facturas\Services\PadronService
+    public static function padron(): \Facturas\Services\PadronService
     {
         return static::getFacadeRoot()->padron;
     }

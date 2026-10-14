@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 use Illuminate\Redis\Connections\Connection;
-use Vant\Facturas\Internal\Js;
+use Facturas\Internal\Js;
 
 /**
  * Store on a Laravel Redis connection (`createRedisStore` in the TypeScript

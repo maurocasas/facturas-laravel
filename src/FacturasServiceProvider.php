@@ -1,16 +1,16 @@
 <?php
 
-namespace Vant\Facturas;
+namespace Facturas;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Store\CacheStore;
-use Vant\Facturas\Store\DatabaseStore;
-use Vant\Facturas\Store\FileStore;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Store\RedisStore;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Store\ArcaStore;
+use Facturas\Store\CacheStore;
+use Facturas\Store\DatabaseStore;
+use Facturas\Store\FileStore;
+use Facturas\Store\MemoryStore;
+use Facturas\Store\RedisStore;
 
 class FacturasServiceProvider extends ServiceProvider
 {

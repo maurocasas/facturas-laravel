@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Services\WsmtxcaService;
+use Facturas\Services\WsmtxcaService;
 
 /**
  * A WsmtxcaService whose methods are fakes (the TS tests' `{ lookupVoucher:

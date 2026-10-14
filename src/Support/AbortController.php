@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Support;
+namespace Facturas\Support;
 
 /** Mirrors the Web `AbortController`: owns a signal and aborts it on demand. */
 final class AbortController

@@ -3,8 +3,8 @@
 require __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/_outcome.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Store\FileStore;
+use Facturas\ArcaClient;
+use Facturas\Store\FileStore;
 
 // Configurá las credenciales de ARCA y un directorio privado que sobreviva a
 // reinicios. Esto emite una nota de crédito real por parte de la factura.

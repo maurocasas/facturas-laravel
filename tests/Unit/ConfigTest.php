@@ -1,10 +1,10 @@
 <?php
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Config\ServiceConfig;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Tests\Support\TestConfig;
-use Vant\Facturas\Wsaa\MemoryWsaaSessionStore;
+use Facturas\Config\ArcaConfig;
+use Facturas\Config\ServiceConfig;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Tests\Support\TestConfig;
+use Facturas\Wsaa\MemoryWsaaSessionStore;
 
 const CONFIG_TEST_ENV_NAMES = ['ARCA_TAX_ID', 'ARCA_CERTIFICATE_PEM', 'ARCA_PRIVATE_KEY_PEM', 'ARCA_ENVIRONMENT'];
 

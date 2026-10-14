@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 /**
  * A stdin whose next chunk is produced only when the command reads it, like a

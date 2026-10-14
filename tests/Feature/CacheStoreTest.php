@@ -3,10 +3,10 @@
 use Illuminate\Cache\Repository;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Cache;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Store\CacheStore;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Store\CacheStore;
+use Facturas\Support\AbortSignal;
 
 function cacheStoreFailure(callable $call): ?\Throwable
 {

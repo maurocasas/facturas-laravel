@@ -1,10 +1,10 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Internal\Js;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Decimal;
+use Facturas\Internal\Js;
 
 /**
  * What a printed class A, B or C voucher must show (`services/voucher-document.ts`).

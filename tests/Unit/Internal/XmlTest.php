@@ -1,8 +1,8 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Internal\Xml;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Internal\Xml;
 
 /** Runs `$fn` and returns what it threw. */
 function xmlTestCaught(callable $fn): Throwable

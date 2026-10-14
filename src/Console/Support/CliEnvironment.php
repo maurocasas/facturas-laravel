@@ -1,14 +1,14 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 use DateTimeImmutable;
 use Illuminate\Support\Carbon;
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Internal\Logger;
-use Vant\Facturas\Wsaa\WsaaAuth;
-use Vant\Facturas\Wsaa\WsaaAuthModule;
+use Facturas\ArcaClient;
+use Facturas\Config\ArcaConfig;
+use Facturas\Internal\Logger;
+use Facturas\Wsaa\WsaaAuth;
+use Facturas\Wsaa\WsaaAuthModule;
 
 /**
  * Everything the CLI touches outside itself: the clock, the ticket cache, the

@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\Console\Support\Cuit;
+use Facturas\Console\Support\Cuit;
 
 /**
  * Public CUIT, verified against ARCA's own constancia de inscripción, so the

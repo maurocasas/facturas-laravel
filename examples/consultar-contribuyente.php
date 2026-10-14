@@ -2,7 +2,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Vant\Facturas\ArcaClient;
+use Facturas\ArcaClient;
 
 $arca = ArcaClient::create();
 

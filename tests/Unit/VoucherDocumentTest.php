@@ -1,11 +1,11 @@
 <?php
 
-use Vant\Facturas\Services\VoucherDocument;
-use Vant\Facturas\Services\VouchersService;
-use Vant\Facturas\Services\VouchersSupport;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Tests\Support\FakeMethods;
-use Vant\Facturas\Tests\Support\WsfePortAssertions;
+use Facturas\Services\VoucherDocument;
+use Facturas\Services\VouchersService;
+use Facturas\Services\VouchersSupport;
+use Facturas\Services\WsfeService;
+use Facturas\Tests\Support\FakeMethods;
+use Facturas\Tests\Support\WsfePortAssertions;
 
 beforeEach(fn () => VouchersSupport::setTestNow(new DateTimeImmutable('2026-09-05T15:00:00Z')));
 afterEach(fn () => VouchersSupport::setTestNow(null));

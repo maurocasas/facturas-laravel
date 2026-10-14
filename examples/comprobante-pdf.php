@@ -2,9 +2,9 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Pdf\VoucherPdf;
-use Vant\Facturas\Services\VoucherDocument;
+use Facturas\ArcaClient;
+use Facturas\Pdf\VoucherPdf;
+use Facturas\Services\VoucherDocument;
 
 // Necesita: composer require dompdf/dompdf chillerlan/php-qrcode
 $arca = ArcaClient::create();

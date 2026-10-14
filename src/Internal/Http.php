@@ -1,14 +1,14 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\RequestOptions;
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Support\AbortSignal;
 
 /**
  * XML POST over HTTPS. Transport retries apply only to ArcaTransportError.
@@ -59,7 +59,7 @@ final class Http
     /** @return array{body: string, statusCode: int, contentType: ?string} */
     private static function postXmlOnce(array $options): array
     {
-        \Vant\Facturas\Store\Lease::renewHeld();
+        \Facturas\Store\Lease::renewHeld();
         $signal = $options['signal'] ?? null;
         if ($signal?->aborted()) {
             $reason = $signal->reason();

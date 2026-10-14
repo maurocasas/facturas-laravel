@@ -1,15 +1,15 @@
 <?php
 
-namespace Vant\Facturas\Soap;
+namespace Facturas\Soap;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Config\ServiceConfig;
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
-use Vant\Facturas\Internal\Http;
-use Vant\Facturas\Internal\Logger;
-use Vant\Facturas\Internal\Redaction;
-use Vant\Facturas\Internal\Xml;
+use Facturas\Config\ArcaConfig;
+use Facturas\Config\ServiceConfig;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Internal\Http;
+use Facturas\Internal\Logger;
+use Facturas\Internal\Redaction;
+use Facturas\Internal\Xml;
 
 final class HttpSoapTransport implements SoapTransport
 {

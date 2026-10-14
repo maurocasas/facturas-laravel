@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 /** In-process store for tests; reservations do not survive the request. */
 final class MemoryStore implements LockingStore
@@ -41,7 +41,7 @@ final class MemoryStore implements LockingStore
         Lease::throwIfAborted($options['signal'] ?? null);
         if (isset($this->locks[$key])) {
             // PHP is single-threaded: a nested holder in this process would wait forever.
-            throw new \Vant\Facturas\Errors\ArcaLockTimeoutError('ARCA store lock stayed held; no work was attempted.', 'held');
+            throw new \Facturas\Errors\ArcaLockTimeoutError('ARCA store lock stayed held; no work was attempted.', 'held');
         }
         $this->locks[$key] = true;
         try {

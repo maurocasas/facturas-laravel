@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Errors;
+namespace Facturas\Errors;
 
 use Throwable;
-use Vant\Facturas\Internal\Redaction;
+use Facturas\Internal\Redaction;
 
 /** Thrown when the SOAP response contains a Fault element. */
 class ArcaSoapFaultError extends ArcaError

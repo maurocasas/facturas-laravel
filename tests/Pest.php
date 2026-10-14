@@ -1,5 +1,5 @@
 <?php
 
-use Vant\Facturas\Tests\TestCase;
+use Facturas\Tests\TestCase;
 
 uses(TestCase::class)->in('Feature');

@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Store\LockingStore;
-use Vant\Facturas\Store\MemoryStore;
+use Facturas\Store\LockingStore;
+use Facturas\Store\MemoryStore;
 
 /**
  * A MemoryStore whose operations can be intercepted (the TS tests'

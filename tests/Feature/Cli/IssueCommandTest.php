@@ -1,11 +1,11 @@
 <?php
 
-use Vant\Facturas\Console\IssueCommand;
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Tests\Support\CliFiles;
-use Vant\Facturas\Tests\Support\CliRunner;
-use Vant\Facturas\Tests\Support\FakeCliEnvironment;
+use Facturas\Console\IssueCommand;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Tests\Support\CliFiles;
+use Facturas\Tests\Support\CliRunner;
+use Facturas\Tests\Support\FakeCliEnvironment;
 
 function issuePair(): array
 {

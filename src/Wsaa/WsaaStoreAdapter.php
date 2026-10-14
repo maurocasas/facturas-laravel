@@ -1,11 +1,11 @@
 <?php
 
-namespace Vant\Facturas\Wsaa;
+namespace Facturas\Wsaa;
 
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Store\LockingStore;
-use Vant\Facturas\Store\StoreKeys;
+use Facturas\Internal\Js;
+use Facturas\Store\ArcaStore;
+use Facturas\Store\LockingStore;
+use Facturas\Store\StoreKeys;
 
 /**
  * A WSAA ticket authorizes fiscal work for twelve hours, so it never reaches

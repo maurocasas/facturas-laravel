@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\IssuanceFieldsTest;
+namespace Facturas\Tests\Unit\IssuanceFieldsTest;
 
-use Vant\Facturas\Services\IssuanceFields;
-use Vant\Facturas\Tests\Support\WsfePortAssertions as A;
+use Facturas\Services\IssuanceFields;
+use Facturas\Tests\Support\WsfePortAssertions as A;
 
 describe('describeVoucherType', function () {
     it('describes type %s', function (int $voucherType, array $expected) {

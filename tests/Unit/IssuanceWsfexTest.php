@@ -1,10 +1,10 @@
 <?php
 
-use Vant\Facturas\Services\IssuanceFields;
-use Vant\Facturas\Services\IssuanceWsfex;
-use Vant\Facturas\Services\VouchersSupport;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Tests\Support\WsfexTestHelpers as H;
+use Facturas\Services\IssuanceFields;
+use Facturas\Services\IssuanceWsfex;
+use Facturas\Services\VouchersSupport;
+use Facturas\Services\WsfeDerive;
+use Facturas\Tests\Support\WsfexTestHelpers as H;
 
 // ARCA only accepts an export voucher dated 5 days either side of today.
 beforeEach(function () {

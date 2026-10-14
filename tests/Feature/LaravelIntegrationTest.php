@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Facades\Arca;
-use Vant\Facturas\Services\VouchersSupport;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Store\DatabaseStore;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\ArcaClient;
+use Facturas\Facades\Arca;
+use Facturas\Services\VouchersSupport;
+use Facturas\Store\ArcaStore;
+use Facturas\Store\DatabaseStore;
+use Facturas\Store\MemoryStore;
+use Facturas\Tests\Support\TestConfig;
 
 beforeEach(function () {
     $pems = TestConfig::pems();

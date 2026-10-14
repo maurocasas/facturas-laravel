@@ -1,10 +1,10 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Errors\ArcaSoapFaultError;
 
 /**
  * Classifies explicit ARCA authentication rejections and runs convenience

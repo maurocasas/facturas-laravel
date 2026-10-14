@@ -1,12 +1,12 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Store\ArcaStore;
-use Vant\Facturas\Store\LockingStore;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Wsaa\MemoryWsaaSessionStore;
-use Vant\Facturas\Wsaa\SessionKeys;
-use Vant\Facturas\Wsaa\WsaaStoreAdapter;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Store\ArcaStore;
+use Facturas\Store\LockingStore;
+use Facturas\Store\MemoryStore;
+use Facturas\Wsaa\MemoryWsaaSessionStore;
+use Facturas\Wsaa\SessionKeys;
+use Facturas\Wsaa\WsaaStoreAdapter;
 
 /** `new Date(ms).toISOString()`. */
 function wsaaStoreTestIso(int $milliseconds): string

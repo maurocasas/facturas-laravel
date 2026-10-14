@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\DB;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Store\DatabaseStore;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Store\DatabaseStore;
+use Facturas\Support\AbortSignal;
 
 function databaseStoreFailure(callable $call): ?\Throwable
 {

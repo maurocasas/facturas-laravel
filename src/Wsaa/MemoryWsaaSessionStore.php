@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Wsaa;
+namespace Facturas\Wsaa;
 
 /** In-process WSAA session store, for tests and local coordination (createMemoryWsaaSessionStore). */
 final class MemoryWsaaSessionStore implements LockingWsaaSessionStore

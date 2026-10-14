@@ -1,10 +1,10 @@
 <?php
 
-use Vant\Facturas\Console\CertCommand;
-use Vant\Facturas\Console\Support\Csr;
-use Vant\Facturas\Tests\Support\CliFiles;
-use Vant\Facturas\Tests\Support\CliRunner;
-use Vant\Facturas\Tests\Support\FakeCliEnvironment;
+use Facturas\Console\CertCommand;
+use Facturas\Console\Support\Csr;
+use Facturas\Tests\Support\CliFiles;
+use Facturas\Tests\Support\CliRunner;
+use Facturas\Tests\Support\FakeCliEnvironment;
 
 /** The pair `init` leaves in a directory, without running `init` itself. */
 function certWriteMaterial(string $directory, string $environment): array

@@ -1,16 +1,16 @@
 <?php
 
-namespace Vant\Facturas\Console;
+namespace Facturas\Console;
 
 use Throwable;
-use Vant\Facturas\Console\Support\Certificate;
-use Vant\Facturas\Console\Support\CliCommand;
-use Vant\Facturas\Console\Support\CliIo;
-use Vant\Facturas\Console\Support\Csr;
-use Vant\Facturas\Console\Support\Discover;
-use Vant\Facturas\Console\Support\Help;
-use Vant\Facturas\Console\Support\Output;
-use Vant\Facturas\Console\Support\Writer;
+use Facturas\Console\Support\Certificate;
+use Facturas\Console\Support\CliCommand;
+use Facturas\Console\Support\CliIo;
+use Facturas\Console\Support\Csr;
+use Facturas\Console\Support\Discover;
+use Facturas\Console\Support\Help;
+use Facturas\Console\Support\Output;
+use Facturas\Console\Support\Writer;
 
 /** `npx facturas cert`: reads the certificate that pairs with a key already in the directory. */
 class CertCommand extends CliCommand

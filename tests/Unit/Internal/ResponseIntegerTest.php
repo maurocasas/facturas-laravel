@@ -1,7 +1,7 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaInvalidSoapResponseError;
-use Vant\Facturas\Internal\ResponseInteger;
+use Facturas\Errors\ArcaInvalidSoapResponseError;
+use Facturas\Internal\ResponseInteger;
 
 const RESPONSE_INTEGER_TEST_OPTIONS = [
     'service' => 'wsmtxca',

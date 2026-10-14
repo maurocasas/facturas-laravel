@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Errors;
+namespace Facturas\Errors;
 
 use Throwable;
-use Vant\Facturas\Internal\Redaction;
+use Facturas\Internal\Redaction;
 
 /** Thrown when an HTTP request to an ARCA endpoint fails at the transport level. */
 class ArcaTransportError extends ArcaError

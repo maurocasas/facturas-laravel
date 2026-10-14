@@ -22,14 +22,14 @@
         "chillerlan/php-qrcode": "^5.0"
     },
     "suggest": {
-        "dompdf/dompdf": "Para generar el PDF del comprobante impreso (Vant\\Facturas\\Pdf\\VoucherPdf).",
+        "dompdf/dompdf": "Para generar el PDF del comprobante impreso (Facturas\\Pdf\\VoucherPdf).",
         "chillerlan/php-qrcode": "Para dibujar el QR de ARCA en el PDF del comprobante impreso.",
         "illuminate/database": "Para el store de base de datos (DatabaseStore).",
         "illuminate/redis": "Para el store de Redis (RedisStore)."
     },
     "autoload": {
         "psr-4": {
-            "Vant\\Facturas\\": "src/"
+            "Facturas\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -37,16 +37,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Vant\\Facturas\\Tests\\": "tests/"
+            "Facturas\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vant\\Facturas\\FacturasServiceProvider"
+                "Facturas\\FacturasServiceProvider"
             ],
             "aliases": {
-                "Arca": "Vant\\Facturas\\Facades\\Arca"
+                "Arca": "Facturas\\Facades\\Arca"
             }
         }
     },

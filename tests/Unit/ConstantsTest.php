@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\Constants;
+use Facturas\Constants;
 
 describe('constants', function () {
     it('exports representative WSFE reference values', function () {

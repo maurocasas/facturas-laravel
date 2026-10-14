@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Tests\Unit\WsfeIdentityTest;
+namespace Facturas\Tests\Unit\WsfeIdentityTest;
 
-use Vant\Facturas\Services\WsfeIdentity;
-use Vant\Facturas\Tests\Support\WsfePortAssertions as A;
+use Facturas\Services\WsfeIdentity;
+use Facturas\Tests\Support\WsfePortAssertions as A;
 
 function sent(): array
 {

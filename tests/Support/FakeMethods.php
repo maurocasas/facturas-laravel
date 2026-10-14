@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
 /**
  * A duck-typed fake whose every method is a `vi.fn()`: it records each call's

@@ -1,6 +1,6 @@
 <?php
 
-use Vant\Facturas\Console\Support\Clipboard;
+use Facturas\Console\Support\Clipboard;
 
 const CLI_CSR = "-----BEGIN CERTIFICATE REQUEST-----\nMIIC\n";
 

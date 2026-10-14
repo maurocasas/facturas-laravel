@@ -13,7 +13,7 @@
  * VoucherPdf::layout() derived) and $headerOnly (only the issuer box, to
  * measure it).
  */
-use Vant\Facturas\Pdf\Format;
+use Facturas\Pdf\Format;
 
 $e = static fn ($value): string => htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 $text = static fn ($value): string => nl2br($e($value), false);

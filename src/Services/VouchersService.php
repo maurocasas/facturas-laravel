@@ -1,14 +1,14 @@
 <?php
 
-namespace Vant\Facturas\Services;
+namespace Facturas\Services;
 
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Internal\Js;
-use Vant\Facturas\Services\VouchersSupport as S;
-use Vant\Facturas\Store\LockingStore;
-use Vant\Facturas\Store\StoreKeys;
+use Facturas\Config\ArcaConfig;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Internal\Js;
+use Facturas\Services\VouchersSupport as S;
+use Facturas\Store\LockingStore;
+use Facturas\Store\StoreKeys;
 
 /**
  * The issuance facade (`createVouchersService()` in the TypeScript SDK):
@@ -19,7 +19,7 @@ use Vant\Facturas\Store\StoreKeys;
  * Options (`IssueOptions`): `service` ('wsfe'|'wsmtxca'), `number` (an externally
  * reserved number), `idempotencyKey`, `representedTaxId`, `forceRefresh`,
  * `include` (`['request' => bool, 'rawResponse' => bool]`) and `abortSignal`
- * ({@see \Vant\Facturas\Support\AbortSignal}). Preview options
+ * ({@see \Facturas\Support\AbortSignal}). Preview options
  * (`PreviewOptions`): `representedTaxId`, `service`, `forceRefresh`,
  * `abortSignal`. Recovery options: `representedTaxId`, `forceRefresh`,
  * `include`, `abortSignal`.
@@ -29,14 +29,14 @@ use Vant\Facturas\Store\StoreKeys;
  */
 final class VouchersService
 {
-    /** @var array{store: ?\Vant\Facturas\Store\ArcaStore, environment: string, taxId: string}|null */
+    /** @var array{store: ?\Facturas\Store\ArcaStore, environment: string, taxId: string}|null */
     private readonly ?array $context;
 
     private ?object $exportIssuance = null;
 
     /**
      * @param  object|array  $wsfe  The WSFE service, or any object with `getNextVoucherNumber`, `issue` and `lookupVoucher`.
-     * @param  ArcaConfig|array{store?: ?\Vant\Facturas\Store\ArcaStore, environment: string, taxId: string}|null  $config  The store context.
+     * @param  ArcaConfig|array{store?: ?\Facturas\Store\ArcaStore, environment: string, taxId: string}|null  $config  The store context.
      */
     public function __construct(
         private readonly object|array $wsfe,

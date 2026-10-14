@@ -1,14 +1,14 @@
 <?php
 
-namespace Vant\Facturas\Console;
+namespace Facturas\Console;
 
 use Throwable;
-use Vant\Facturas\Console\Support\Check;
-use Vant\Facturas\Console\Support\CliIo;
-use Vant\Facturas\Console\Support\Help;
-use Vant\Facturas\Console\Support\Output;
-use Vant\Facturas\Console\Support\SmokeTest;
-use Vant\Facturas\Console\Support\Writer;
+use Facturas\Console\Support\Check;
+use Facturas\Console\Support\CliIo;
+use Facturas\Console\Support\Help;
+use Facturas\Console\Support\Output;
+use Facturas\Console\Support\SmokeTest;
+use Facturas\Console\Support\Writer;
 
 /** `npx facturas issue`: issues exactly one ARS 1 invoice in homologación. Refuses anywhere else. */
 class IssueCommand extends CheckCommand

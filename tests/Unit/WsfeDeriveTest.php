@@ -1,10 +1,10 @@
 <?php
 
-use Vant\Facturas\Constants;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Errors\SafeErrorMetadata;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Tests\Support\WsfePortAssertions;
+use Facturas\Constants;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Errors\SafeErrorMetadata;
+use Facturas\Services\WsfeDerive;
+use Facturas\Tests\Support\WsfePortAssertions;
 
 const WSFE_DERIVE_BASE = [
     'issuer' => 'responsable_inscripto',

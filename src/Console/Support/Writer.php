@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 /** One line per fact. Colors land on the mark and nowhere else (`CliWriter`). */
 final class Writer

@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Redis;
-use Vant\Facturas\Errors\ArcaLockTimeoutError;
-use Vant\Facturas\Store\RedisStore;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaLockTimeoutError;
+use Facturas\Store\RedisStore;
+use Facturas\Support\AbortSignal;
 
 function redisStoreFailure(callable $call): ?\Throwable
 {

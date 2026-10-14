@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Errors;
+namespace Facturas\Errors;
 
 use RuntimeException;
 use Throwable;

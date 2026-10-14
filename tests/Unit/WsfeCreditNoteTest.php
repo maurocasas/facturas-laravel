@@ -1,9 +1,9 @@
 <?php
 
-use Vant\Facturas\Services\WsfeCreditNote;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Tests\Support\WsfePortAssertions;
+use Facturas\Services\WsfeCreditNote;
+use Facturas\Services\WsfeDerive;
+use Facturas\Services\WsfeService;
+use Facturas\Tests\Support\WsfePortAssertions;
 
 function creditNoteOriginal(array $input): array
 {

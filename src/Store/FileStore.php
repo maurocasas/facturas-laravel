@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Store;
+namespace Facturas\Store;
 
 /**
  * Persistent store for a single server with a private durable volume

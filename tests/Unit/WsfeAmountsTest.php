@@ -1,9 +1,9 @@
 <?php
 
-use Vant\Facturas\Internal\Decimal;
-use Vant\Facturas\Services\WsfeAmounts;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Tests\Support\WsfePortAssertions;
+use Facturas\Internal\Decimal;
+use Facturas\Services\WsfeAmounts;
+use Facturas\Services\WsfeService;
+use Facturas\Tests\Support\WsfePortAssertions;
 
 const WSFE_AMOUNTS_BASE = [
     'salesPoint' => 1,
@@ -111,7 +111,7 @@ describe('WSFE amount core', function () {
                 );
                 try {
                     WsfeAmounts::calculateWsfeAmounts(['voucherClass' => 'B', 'items' => $items, 'total' => $total]);
-                } catch (\Vant\Facturas\Errors\ArcaInputError $error) {
+                } catch (\Facturas\Errors\ArcaInputError $error) {
                     expect($error->expected)->toContain((string) $amounts['computedTotal']);
                 }
             }

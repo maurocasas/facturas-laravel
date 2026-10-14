@@ -1,9 +1,9 @@
 <?php
 
-namespace Vant\Facturas\Internal;
+namespace Facturas\Internal;
 
-use Vant\Facturas\Errors\ArcaTransportError;
-use Vant\Facturas\Support\AbortSignal;
+use Facturas\Errors\ArcaTransportError;
+use Facturas\Support\AbortSignal;
 
 /** @internal */
 final class Abort

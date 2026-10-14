@@ -1,21 +1,21 @@
 <?php
 
-use Vant\Facturas\Errors\ArcaError;
-use Vant\Facturas\Errors\ArcaInputError;
-use Vant\Facturas\Services\IssuanceWsmtxca;
-use Vant\Facturas\Services\VouchersService;
-use Vant\Facturas\Services\VouchersSupport;
-use Vant\Facturas\Services\WsfeDerive;
-use Vant\Facturas\Services\WsfeIdentity;
-use Vant\Facturas\Services\WsfeService;
-use Vant\Facturas\Services\WsmtxcaService;
-use Vant\Facturas\Store\MemoryStore;
-use Vant\Facturas\Store\StoreKeys;
-use Vant\Facturas\Tests\Support\FakeAuth;
-use Vant\Facturas\Tests\Support\FakeMethods;
-use Vant\Facturas\Tests\Support\FakeSoapTransport;
-use Vant\Facturas\Tests\Support\MatchObject;
-use Vant\Facturas\Tests\Support\TestConfig;
+use Facturas\Errors\ArcaError;
+use Facturas\Errors\ArcaInputError;
+use Facturas\Services\IssuanceWsmtxca;
+use Facturas\Services\VouchersService;
+use Facturas\Services\VouchersSupport;
+use Facturas\Services\WsfeDerive;
+use Facturas\Services\WsfeIdentity;
+use Facturas\Services\WsfeService;
+use Facturas\Services\WsmtxcaService;
+use Facturas\Store\MemoryStore;
+use Facturas\Store\StoreKeys;
+use Facturas\Tests\Support\FakeAuth;
+use Facturas\Tests\Support\FakeMethods;
+use Facturas\Tests\Support\FakeSoapTransport;
+use Facturas\Tests\Support\MatchObject;
+use Facturas\Tests\Support\TestConfig;
 
 // The fixtures are dated around 2026-09-04, and ARCA only accepts a voucher
 // dated near the day it is sent.
@@ -430,7 +430,7 @@ describe('complete WSFE issuance', function () {
 });
 
 /**
- * @return array{client: VouchersService, soap: FakeSoapTransport, state: stdClass, config: \Vant\Facturas\Config\ArcaConfig, auth: FakeAuth, store: MemoryStore, handler: Closure}
+ * @return array{client: VouchersService, soap: FakeSoapTransport, state: stdClass, config: \Facturas\Config\ArcaConfig, auth: FakeAuth, store: MemoryStore, handler: Closure}
  */
 function ic_transportFixture(): array
 {

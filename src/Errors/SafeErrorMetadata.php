@@ -1,6 +1,6 @@
 <?php
 
-namespace Vant\Facturas\Errors;
+namespace Facturas\Errors;
 
 use Throwable;
 
@@ -59,7 +59,7 @@ final class SafeErrorMetadata
     private static function jsString(mixed $value): string
     {
         if ($value === null || is_scalar($value)) {
-            return \Vant\Facturas\Internal\Js::str($value);
+            return \Facturas\Internal\Js::str($value);
         }
         if (is_array($value) && array_is_list($value)) {
             return implode(',', array_map(fn ($item) => $item === null ? '' : self::jsString($item), $value));

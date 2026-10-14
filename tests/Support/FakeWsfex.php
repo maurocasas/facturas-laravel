@@ -1,8 +1,8 @@
 <?php
 
-namespace Vant\Facturas\Tests\Support;
+namespace Facturas\Tests\Support;
 
-use Vant\Facturas\Services\WsfexService;
+use Facturas\Services\WsfexService;
 
 /**
  * An in-memory WSFEX (the TS issuance tests' `arca()`): numbers advance per

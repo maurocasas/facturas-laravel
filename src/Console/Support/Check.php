@@ -1,16 +1,16 @@
 <?php
 
-namespace Vant\Facturas\Console\Support;
+namespace Facturas\Console\Support;
 
 use DateTimeImmutable;
 use Throwable;
-use Vant\Facturas\ArcaClient;
-use Vant\Facturas\Config\ArcaConfig;
-use Vant\Facturas\Config\ServiceConfig;
-use Vant\Facturas\Errors\ArcaAuthenticationError;
-use Vant\Facturas\Errors\ArcaConfigurationError;
-use Vant\Facturas\Errors\ArcaServiceError;
-use Vant\Facturas\Errors\ArcaSoapFaultError;
+use Facturas\ArcaClient;
+use Facturas\Config\ArcaConfig;
+use Facturas\Config\ServiceConfig;
+use Facturas\Errors\ArcaAuthenticationError;
+use Facturas\Errors\ArcaConfigurationError;
+use Facturas\Errors\ArcaServiceError;
+use Facturas\Errors\ArcaSoapFaultError;
 
 /**
  * The layered diagnosis behind `facturas:check` and `facturas:issue`
